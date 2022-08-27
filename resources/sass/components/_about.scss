@@ -1,0 +1,95 @@
+.about {
+    position: relative;
+    padding: 150px 0 320px;
+
+    @media screen and (max-width: 980px) {
+        padding: 100px 0;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 30px 0;
+    }
+
+    &::before {
+        background: url(../../images/about_bg.png) no-repeat top center;
+        position: absolute;
+        top: -50px;
+        right: 0;
+        content: '';
+        width: 100%;
+        max-width: 1600px;
+        height: 850px;
+        z-index: 0;
+
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    .container {
+        display: flex;
+        gap: 80px;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        width: 1260px;
+
+        @media screen and (max-width: 1275px) {
+            max-width: 100%;
+            width: 96%;
+        }
+
+        @media screen and (max-width: 1174px) {
+			gap: 50px;
+		}
+
+        @media screen and (max-width: 980px) {
+			flex-wrap: wrap-reverse;
+            gap: 20px;
+		}
+    }
+
+    .info {
+        @media screen and (max-width: 980px) {
+            padding: 0px 35px 0px 55px;
+        }
+
+        @media screen and (max-width: 980px) {
+            padding: 0px 30px;
+        }
+    }
+
+    h2 {
+        font-size: 58px;
+        font-weight: 800;
+        line-height: 110%;
+        margin-bottom: 25px;
+
+        @media screen and (max-width: 1174px) {
+			font-size: 45px;
+		}
+        
+        @media screen and (max-width: 576px) {
+			font-size: 36px;
+		}
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 25px;
+        color: $text-clr;
+    }
+
+    .about-img {
+        height: 350px;
+
+        @media screen and (max-width: 1174px) {
+			height: 300px;
+		}
+
+        @media screen and (max-width: 980px) {
+			height: auto;
+		}
+    }
+}

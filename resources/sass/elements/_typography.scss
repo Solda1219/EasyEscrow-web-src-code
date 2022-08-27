@@ -1,0 +1,108 @@
+h1 {
+    font-size: 55px;
+    font-family: $font-family;
+    font-weight: 700;
+
+    @media screen and (max-width: 1174px) {
+        font-size: 37px;
+    }
+}
+
+h2 {
+    font-size: 36px;
+    font-family: $font-family;
+    font-weight: 700;
+    letter-spacing: -0.04rem;
+}
+
+h3 {
+    font-size: 22px;
+    line-height: 140%;
+    font-family: $font-family;
+    font-weight: 700;
+
+    @media screen and (max-width: 992px) {
+        font-size: 18px;
+    }
+}
+
+p {
+    font-size: 24px;
+    line-height: $lineheight;
+    font-family: $font-family;
+    font-weight: 400;
+
+    @media screen and (max-width: 768px) {
+        font-size: 16px;
+    }
+}
+
+div, ul, ol, li, h1, h2, h3, h4, h5, h6,  form, p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    line-height: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    color: $text-clr;
+    word-break: break-all;
+    word-break: break-word;
+    display: inline-block;
+    color: $white-clr;
+
+    &:visited {
+        border-bottom: 1px solid;
+    }
+    &:hover {
+        border-bottom: none;
+    }
+    &:active {
+        color: $text-clr;
+    }
+    &:focus {
+        border: none;
+    }
+}
+
+strong, b  {
+    font-weight: bold;
+}
+em, i {
+    font-style: italic;
+}
+h1, h2, h3, h4, h5, h6 {
+    line-height: $lineheight;
+    text-rendering: optimizeLegibility;
+    word-break: break-word;
+
+    @media screen and (max-width: 980px) {
+		line-height: 1.5;
+	}
+
+    @media screen and (max-width: 768px) {
+		line-height: 1.25;
+	}
+}
+
+  // Lists
+ul, ol, dl {
+    margin-bottom: 40px;
+    list-style-position: outside;
+    line-height: $lineheight;
+}
+
+li {
+    font-size: inherit;
+    margin-bottom: 0.5rem;
+}
+
+ul {
+    margin-left: 1.25rem;
+    list-style-type: disc;
+}
+
+ol {
+    margin-left: 1.25rem;
+}

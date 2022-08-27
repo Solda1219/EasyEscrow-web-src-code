@@ -1,0 +1,169 @@
+main {
+	background: url("../../images/banner_bg.png") no-repeat top center;
+	margin-top: 50px;
+	margin-bottom: 250px;
+
+	@media screen and (max-width: 980px) {
+		margin-bottom: 70px;
+	}
+
+	.banner-inner {
+		text-align: center;
+		margin-bottom: 50px;
+		max-width: 1000px;
+		min-height: 200px;
+
+		@media screen and (max-width: 980px) {
+			padding: 0 30px;
+			box-sizing: border-box;
+		}
+
+		h1 {
+			font-size: 80px;
+			font-weight: 800;
+			margin-bottom: 15px;
+
+			@media screen and (max-width: 980px) {
+				font-size: 60px;
+			}
+
+			@media screen and (max-width: 768px) {
+				font-size: 40px;
+			}
+		}
+
+		p {
+			font-size: 16px;
+			line-height: 19px;
+		}
+	}
+
+	.min-height {
+		min-height: 745px;
+
+		@media screen and (max-width: 980px) {
+			min-height: 580px;
+		}
+
+		@media screen and (max-width: 768px) {
+			min-height: auto;
+		}
+	}
+
+	.block {
+		background: $linear-gradient;
+		box-shadow: 0px 4px 100px $shadow;
+		border-radius: 20px;
+		box-sizing: border-box;
+
+		form {
+			background: url("../../images/form_bg.png") no-repeat bottom right;
+			padding: 58px 96px;
+
+			@media screen and (max-width: 980px) {
+				padding: 55px;
+				background-size: 70%;
+			}
+
+			@media screen and (max-width: 768px) {
+				padding: 50px 30px;
+			}
+
+			.form-row {
+				width: 620px;
+
+				@media screen and (max-width: 768px) {
+					width: 100%;
+				}
+
+				&.confirm-check {
+					p {
+						margin-bottom: 5px;
+					}
+				}
+			}
+		}
+
+		.sub-form {
+			padding: 10px 0;
+		}
+	}
+}
+
+.form-row {
+	margin-bottom: 20px;
+
+	label {
+		display: block;
+		margin-bottom: 10px;
+		color: $white-clr;
+	}
+
+	p {
+		font-size: 18px;
+
+		small {
+			font-size: 14px;
+		}
+	}
+
+	&.confirm-check {
+
+		input {
+			padding: 0;
+			height: initial;
+			width: initial;
+			margin-bottom: 0;
+			display: none;
+			cursor: pointer;
+
+			&:checked + label:after {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 5px;
+				left: 6px;
+				width: 5px;
+				height: 11px;
+				border: solid $primary-clr;
+				border-width: 0 2px 2px 0;
+				transform: rotate(45deg);
+			}
+		}
+
+		label {
+			display: inline;
+			position: relative;
+			cursor: pointer;
+			color: $white-clr;
+
+			&::before {
+				content:'';
+				-webkit-appearance: none;
+				background-color: $white-clr;
+				border: 2px solid $white-clr;
+				padding: 8px;
+				display: inline-block;
+				position: relative;
+				vertical-align: middle;
+				cursor: pointer;
+				margin-right: 10px;
+				border-radius: 4px;
+			}
+		}
+	}
+
+	&.images-array {
+			display: flex;
+			gap: 10px;
+			flex-wrap: wrap;
+
+			img {
+				max-height: 100px;
+			}
+		}
+}
+
+.hidden {
+	display: none;
+}

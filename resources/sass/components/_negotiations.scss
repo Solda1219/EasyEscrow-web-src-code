@@ -1,0 +1,22 @@
+.negotiation-info {
+	margin: 10px;
+	border-left: 2px solid #666;
+	border-radius: 10px;
+	padding: 5px 20px 10px;
+
+	.negotiation-date {
+		margin: 10px 0 20px;
+		font-size: 16px;
+	}
+
+	.transaction-images,
+	.transaction-date {
+		border: none;
+		padding: 0;
+	}
+
+	.transaction-images {
+		margin-bottom: 0;
+	}
+
+}

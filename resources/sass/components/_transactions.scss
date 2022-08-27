@@ -1,0 +1,153 @@
+.transactions {
+	padding: 50px 70px;
+
+	@media screen and (max-width: 980px) {
+		padding: 50px;
+	}
+
+	@media screen and (max-width: 768px) {
+		padding: 50px 30px;
+	}
+}
+
+.transaction {
+	&-block {
+		margin-bottom: 23px;
+		background-color: rgba($color: $white-clr, $alpha: 0.05);
+		border: 1px solid rgba($color: $white-clr, $alpha: 0.10);
+		border-left: 8px solid;
+		border-radius: 18px;
+		padding: 20px;
+		box-sizing: border-box;
+		font-size: 16px;
+
+		&.pending {
+			border-left-color: $secondary-clr;
+
+			.message {
+				color: $secondary-clr;
+			}
+		}
+
+		&.cancelled {
+			border-left-color: $alert-clr;
+
+			.message {
+				color: $alert-clr;
+			}
+		}
+
+		&.completed, &.confirmed {
+			border-left-color: $success-clr;
+
+			.message {
+				color: $success-clr;
+			}
+		}
+
+		p {
+			font-size: 18px;
+			line-height: 1.5;
+		}
+	}
+
+	&-type {
+		margin-top: 0;
+		margin-bottom: 20px;
+	}
+
+	&-header {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 20px;
+		font-size: 19px;
+
+		span {
+			font-size: 16px;
+		}
+
+		@media screen and (max-width: 576px) {
+			gap: 15px;
+			flex-direction: column;
+		}
+	}
+
+	&-detail {
+		margin-bottom: 20px;
+		padding: 10px 5px;
+		border-top: 1px solid rgba($color: $white-clr, $alpha: 0.10);
+		border-bottom: 1px solid rgba($color: $white-clr, $alpha: 0.10);
+	}
+
+	&-desc {
+		margin-bottom: 20px;
+	}
+
+	&-images {
+		display: flex;
+		gap: 20px;
+		flex-wrap: wrap;
+		margin-bottom: 20px;
+		padding-bottom: 20px;
+		border-bottom: 1px solid rgba($color: $white-clr, $alpha: 0.10);
+
+		img {
+			max-width: 200px;
+			max-height: 200px;
+			border: 1px solid rgba($color: $white-clr, $alpha: 0.10);
+		}
+	}
+
+	&-date {
+		padding-bottom: 10px;
+		margin-bottom: 20px;
+		border-bottom: 1px solid rgba($color: $white-clr, $alpha: 0.10);
+
+		span {
+			text-transform: capitalize;
+		}
+	}
+
+	&-actions {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		gap: 20px;
+
+		@media screen and (max-width: 768px) {
+			flex-wrap: wrap;
+			gap: 25px;
+		}
+
+		p {
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+			gap: 10px;
+
+			@media screen and (max-width: 768px) {
+				border-bottom: 1px solid rgba($color: $white-clr, $alpha: 0.10);
+				width: 100%;
+				align-items: center;
+				padding-bottom: 20px;
+
+				&:last-of-type {
+					border: 0;
+					padding-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+.transaction-empty {
+	background-color: rgba($color: $white-clr, $alpha: 0.05);
+	border: 1px dashed rgba($color: $white-clr, $alpha: 0.5);
+	border-radius: 18px;
+	padding: 20px;
+	box-sizing: border-box;
+	font-size: 16px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}

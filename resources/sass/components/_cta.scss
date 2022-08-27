@@ -1,0 +1,77 @@
+.cta {
+    background-color: $secondary-clr;
+    padding: 70px 0 50px;
+
+	@media screen and (max-width: 1174px) {
+        padding: 70px 0;
+    }
+
+	@media screen and (max-width: 768px) {
+        padding: 30px;
+    }
+
+    .container {
+		width: 780px;
+		text-align: center;
+
+		@media screen and (max-width: 980px) {
+			width: 70%;
+		}
+
+		@media screen and (max-width: 768px) {
+			width: 100%;
+		}
+	}
+
+    h2 {
+		font-size: 40px;
+		line-height: 45px;
+		font-weight: 700;
+		margin-bottom: 40px;
+
+		@media screen and (max-width: 576px) {
+			font-size: 36px;
+		}
+	}
+
+	.btn {
+		margin-bottom: 50px;
+	}
+
+	p {
+		font-size: 16px;
+		line-height: 22px;
+		margin-bottom: 40px;
+
+		&.message {
+			margin-bottom: 0;
+			margin-top: 10px;
+			font-weight: 700;
+
+			&.success {
+				color: $success-clr;
+			}
+
+			&.error {
+				color: $alert-clr;
+			}
+		}
+	}
+
+    form {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+		@media screen and (max-width: 576px) {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		input[type="email"] {
+			@media screen and (max-width: 576px) {
+				width: 100%;
+			}
+		}
+    }
+}

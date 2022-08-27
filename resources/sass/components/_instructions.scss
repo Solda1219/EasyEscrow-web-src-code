@@ -1,0 +1,120 @@
+.instructions {
+    margin-bottom: 95px;
+
+    .container {
+        background-color: #1b1b1b;
+        border-radius: 20px;
+        display: flex;
+        gap: 80px;
+        align-items: center;
+        padding: 115px 35px 90px 94px;
+        box-sizing: border-box;
+        position: relative;
+        margin-bottom: 371px;
+
+        @media screen and (max-width: 1275px) {
+            gap: 50px;
+            padding: 90px 35px 80px 55px;
+        }
+
+        @media screen and (max-width: 1024px) {
+            flex-direction: column;
+        }
+
+        @media screen and (max-width: 980px) {
+            margin-bottom: 270px;
+        }
+
+        @media screen and (max-width: 768px) {
+            gap: 50px;
+            padding: 50px 30px;
+            margin-bottom: 50px;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            bottom: -271px;
+            right: 20px;
+            background: url(../../images/instructions-bg.png) no-repeat bottom
+                right;
+            width: 100%;
+            height: 271px;
+
+            @media screen and (max-width: 980px) {
+                bottom: -210px;
+                z-index: -1;
+            }
+
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        h3 {
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 31px;
+            color: $text-clr;
+            margin-bottom: 15px;
+        }
+    }
+
+    .info {
+        h2 {
+            font-size: 36px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+
+        @media screen and (max-width: 980px) {
+            width: 100%;
+        }
+    }
+
+    li {
+        width: 533px;
+        margin-bottom: 23px;
+        background-color: rgba($color: $white-clr, $alpha: 0.02);
+        border: 1px solid rgba($color: $white-clr, $alpha: 0.05);
+        border-radius: 18px;
+        padding: 20px 53px 20px 20px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        gap: 21px;
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
+
+        @media screen and (max-width: 576px) {
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        div {
+            @media screen and (max-width: 576px) {
+                text-align: center;
+            }
+        }
+
+        p {
+            font-size: 16px !important;
+            line-height: 24px !important;
+            margin: 0 !important;
+        }
+
+        img {
+            height: 80px;
+        }
+    }
+}

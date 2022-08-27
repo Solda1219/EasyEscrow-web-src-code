@@ -1,0 +1,40 @@
+.btn {
+	padding: 15px 50px;
+	width: auto;
+	height: 50px;
+	line-height: 1.25;
+	border-radius: 48px;
+	box-sizing: border-box;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 700;
+	border: none;
+	font-family: $font-family;
+	background-color: $secondary-clr;
+	color: $white-clr;
+	cursor: pointer;
+	text-decoration: none;
+
+	&-dark {
+		background-color: $primary-clr;
+		color: $secondary-clr;
+	}
+
+	&-cancel {
+		background-color: $alert-clr;
+	}
+
+	&-accept {
+		background-color: $success-clr;
+	}
+
+	&-group {
+		display: flex;
+		gap: 30px;
+		justify-content: center;
+
+		&.left-aligned {
+			justify-content: flex-start;
+		}
+	}
+}
